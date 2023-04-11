@@ -1,0 +1,20 @@
+.nav{
+  min-width: 60px;
+  &_container{
+    display: flex;
+    flex-direction: column;
+  }
+  &_tilte,&_setting{
+    color: rgba($color: #fff, $alpha: 1.0);
+  }
+  &_list{
+    &-item{
+
+    }
+    &-link{
+      color: rgba($color: #fff, $alpha: 1.0);
+    }
+  }
+  
+}
+

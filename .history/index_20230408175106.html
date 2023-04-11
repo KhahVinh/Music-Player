@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mucsic_player</title>
+  <!-- Link Icon -->
+  <link rel="stylesheet" href="./assets/font/themify-icons/themify-icons.css">
+  <!-- Link Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,700;1,600&display=swap" rel="stylesheet">
+  <!-- Link CSS -->
+  <link rel="stylesheet" href="./assets/css/grid.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+  <div class="app grid wide">
+    <!-- Thanh điều hướng -->
+    <nav class="nav">
+      <div class="nav_container">
+        <span class="nav_tilte">
+          <i class="ti-world"></i>
+        </span>
+        <ul class="nav_list">
+          <li class="nav_list-iteam">
+            <a href="#" class="nav_list-link">
+              <i class="ti-home"></i>
+            </a>
+          </li>
+          <li class="nav_list-iteam">
+            <a href="#" class="nav_list-link">
+              <i class="ti-music-alt"></i>
+            </a>
+          </li>
+          <li class="nav_list-iteam">
+            <a href="#" class="nav_list-link">
+              <i class="ti-folder"></i>
+            </a>
+          </li>
+          <li class="nav_list-iteam">
+            <a href="#" class="nav_list-link">
+              <i class="ti-user"></i>
+            </a>
+          </li>
+        </ul>
+        <ul class="nav_list">
+          <li class="nav_list-iteam">
+            <a href="#" class="nav_list-link">
+              <i class="ti-heart"></i>
+            </a>
+          </li>
+          <li class="nav_list-iteam">
+            <a href="#" class="nav_list-link">
+              <i class="ti-crown"></i>
+            </a>
+          </li>
+          <li class="nav_list-iteam">
+            <a href="#" class="nav_list-link">
+              <i class="lock"></i>
+            </a>
+          </li>
+        </ul>
+        <span class="nav_setting">
+          <i class="ti-settings"></i>
+        </span>
+      </div>
+    </nav>
+    <!-- Phần hiển thị nội dung chơi nhạc -->
+    <div class="play">
+      <!-- Phần chơi nhạc -->
+      <div class="play_song">
+        <span class="play_intro">
+          <span>Next composition</span>
+          <span><i class="ti-plus"></i></span>
+        </span>
+        <ul class="album">
+          <li class="ablum_list">
+            <a href="" class="ablum_link">
+
+            </a></li>
+          <li class="ablum_list">
+            <a href="" class="ablum_link">
+
+            </a></li>
+          <li class="ablum_list">
+            <a href="" class="ablum_link">
+
+            </a></li>
+        </ul>
+      </div>
+      <!-- Nội dụng các BXH bài hát -->
+      <div class="play_list">
+        <!-- Thanh tìm kiếm bài hát -->
+        <div class="list_nav">
+          <h1 class="list_heading">Home</h1>
+          <span class="search_container">
+            <span class="search_noti">
+              <i class="ti-bell"></i>
+            </span>
+            <span class="search_box">
+              <span class="search_icon">
+                <i class="ti-search"></i>
+              </span>
+              <input type="text" name="" id="" class="search_input" placeholder="Search">
+            </span>
+            </span>
+          </span>
+        </div>
+        <!-- Phần nội dung các BXH bài hát -->
+        <div class="list_body row">
+          <!-- Phần bài hát trend -->
+          <div class="col c-9">
+            <div class="list_trend">
+              <div class="banner">
+                <span class="banner_img" style="background-image: url(./assets/img/song/1.jpg);"></span>
+                <!-- <div class="banner_intro">
+                  <span class="intro_author">Taylor Switch</span>
+                  <h3 class="intro_heading">Listen to trending songs all the time</h3>
+                  <a href="#" class="intro_play">Explore now</a>
+                </div> -->
+              </div>
+              <div class="trend_container">
+                <div class="trend_tilte">
+                  <h2 class="trend_heading">Trending right now</h2>
+                  <a href="#" class="trend_more">See all</a>
+                </div>
+                <!-- TREND LIST -->
+                <ul class="trend_list">
+                      <li class="trend_item">
+                        <a href="#" class="trend_link">
+                            <span class="trend_song">
+                              <span class="trend_song-number">01</span>
+                              <span class="trend_song-img" style="background-image: url(./assets/img/backgrounds/1.jpg);"></span>
+                              <span class="trend_song-dic">
+                                <span class="trend_song-name">Forget Me</span>
+                                <span class="trend_song-act">
+                                  <span>
+                                    <i class="ti-user"></i>
+                                  </span>
+                                  <span>Lewis Capaldi</span>
+                                </span>
+                              </span>
+                            </span>
+                            <span class="trend_time-song">03:24</span>
+                            <span class="trend_option">
+                              <span class="trend_option-icon">
+                                <i class="ti-heart"></i>
+                              </span>
+                              <span class="trend_option-icon --icon-op">
+                                <i class="ti-more-alt"></i>
+                              </span>
+                            </span>
+                        </a>
+                      </li> 
+                      <li class="trend_item">
+                        <a href="#" class="trend_link">
+                            <span class="trend_song">
+                              <span class="trend_song-number">01</span>
+                              <span class="trend_song-img" style="background-image: url(./assets/img/backgrounds/1.jpg);"></span>
+                              <span class="trend_song-dic">
+                                <span class="trend_song-name">Forget Me</span>
+                                <span class="trend_song-act">
+                                  <span>
+                                    <i class="ti-user"></i>
+                                  </span>
+                                  <span>Lewis Capaldi</span>
+                                </span>
+                              </span>
+                            </span>
+                            <span class="trend_time-song">03:24</span>
+                            <span class="trend_option">
+                              <span class="trend_option-icon">
+                                <i class="ti-heart"></i>
+                              </span>
+                              <span class="trend_option-icon --icon-op">
+                                <i class="ti-more-alt"></i>
+                              </span>
+                            </span>
+                        </a>
+                      </li>
+                      <li class="trend_item">
+                        <a href="#" class="trend_link">
+                            <span class="trend_song">
+                              <span class="trend_song-number">01</span>
+                              <span class="trend_song-img" style="background-image: url(./assets/img/backgrounds/1.jpg);"></span>
+                              <span class="trend_song-dic">
+                                <span class="trend_song-name">Forget Me</span>
+                                <span class="trend_song-act">
+                                  <span>
+                                    <i class="ti-user"></i>
+                                  </span>
+                                  <span>Lewis Capaldi</span>
+                                </span>
+                              </span>
+                            </span>
+                            <span class="trend_time-song">03:24</span>
+                            <span class="trend_option">
+                              <span class="trend_option-icon">
+                                <i class="ti-heart"></i>
+                              </span>
+                              <span class="trend_option-icon --icon-op">
+                                <i class="ti-more-alt"></i>
+                              </span>
+                            </span>
+                        </a>
+                      </li>
+                      <li class="trend_item">
+                        <a href="#" class="trend_link">
+                            <span class="trend_song">
+                              <span class="trend_song-number">01</span>
+                              <span class="trend_song-img" style="background-image: url(./assets/img/backgrounds/1.jpg);"></span>
+                              <span class="trend_song-dic">
+                                <span class="trend_song-name">Forget Me</span>
+                                <span class="trend_song-act">
+                                  <span>
+                                    <i class="ti-user"></i>
+                                  </span>
+                                  <span>Lewis Capaldi</span>
+                                </span>
+                              </span>
+                            </span>
+                            <span class="trend_time-song">03:24</span>
+                            <span class="trend_option">
+                              <span class="trend_option-icon">
+                                <i class="ti-heart"></i>
+                              </span>
+                              <span class="trend_option-icon --icon-op">
+                                <i class="ti-more-alt"></i>
+                              </span>
+                            </span>
+                        </a>
+                      </li>
+                      <li class="trend_item">
+                        <a href="#" class="trend_link">
+                            <span class="trend_song">
+                              <span class="trend_song-number">01</span>
+                              <span class="trend_song-img" style="background-image: url(./assets/img/backgrounds/1.jpg);"></span>
+                              <span class="trend_song-dic">
+                                <span class="trend_song-name">Forget Me</span>
+                                <span class="trend_song-act">
+                                  <span>
+                                    <i class="ti-user"></i>
+                                  </span>
+                                  <span>Lewis Capaldi</span>
+                                </span>
+                              </span>
+                            </span>
+                            <span class="trend_time-song">03:24</span>
+                            <span class="trend_option">
+                              <span class="trend_option-icon">
+                                <i class="ti-heart"></i>
+                              </span>
+                              <span class="trend_option-icon --icon-op">
+                                <i class="ti-more-alt"></i>
+                              </span>
+                            </span>
+                        </a>
+                      </li> 
+                  
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- Phần bài hát đề xuất, ưu tiên -->
+          <!-- .col.c- -->
+          <div class="list_top">
+            <!-- Top artist -->
+            <div class="artist">
+              <div class="artist_intro">
+                <h2 class="artist_heading">Top Artist</h2>
+                <a href="#" class="artist_more">See all</a>
+              </div>
+              <ul class="artist_list">
+                <li class="artist_item">
+                  <a href="#" class="artist_link">
+                    <span class="artist_song-name">
+                      <span class="artist_img" style="background-image: url(./assets/img/song/1.jpg);"></span>
+                      <span class="artist_song-dic">
+                        <span class="artist_song-name">Muse</span>
+                        <span class="artist_song-play">
+                          <span class="artist_song-play-icon">
+                            <i class="ti-headphone"></i>
+                          </span>
+                          <span class="artist_song-play-number">
+                            119M Plays
+                          </span>
+                        </span>
+                      </span>
+                    </span>
+                    <span class="artist_song-option">
+                      <i class="ti-more-alt"></i>
+                    </span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <!-- Top favourites -->
+            <div class="favoutite">
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

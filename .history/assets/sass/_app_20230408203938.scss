@@ -1,0 +1,12 @@
+.app{
+  // background-color: rgba(#c4c4c4, $alpha: 0.1);
+  background-color: rgba($color: #3c3abe, $alpha: 0.3);
+  background-color: rgba($color: #fff, $alpha: 1.0);
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  border-radius: var(--border-radius);
+}
+

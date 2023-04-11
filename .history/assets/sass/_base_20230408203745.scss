@@ -1,0 +1,36 @@
+// RESET CSS
+*,::before,::after{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+// CSS FORM
+html{
+  font-size: 62.5%;
+  line-height: 1.6rem;
+  font-family: var(--main-font);
+}
+
+input{
+  outline: none;
+}
+
+ul{
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+}
+
+body{
+  background-color: var(--fifth-colour);
+}
+
+span{
+  display: inline block;
+}
+
+h1,h2,h3,h4{
+  color: var(--fifth-colour);
+}
