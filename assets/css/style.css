@@ -91,13 +91,18 @@ h1, h2, h3, h4 {
   .play_song {
     display: none; }
   .play_list {
-    flex: 1;
-    margin: 12px;
-    background-color: var(--fourth-colour);
-    border-radius: var(--border-radius);
-    padding: 24px;
     height: 790px;
-    overflow-y: scroll; }
+    overflow-y: scroll;
+    overflow-x: hidden;
+    will-change: --webkit-scrollbar; }
+    .play_list-container {
+      flex: 1;
+      margin: 12px;
+      background-color: var(--fourth-colour);
+      border-radius: var(--border-radius);
+      padding: 24px 12px 24px 24px; }
+    .play_list::-webkit-scrollbar {
+      width: 12px; }
 
 .list_nav {
   display: flex;
@@ -118,11 +123,13 @@ h1, h2, h3, h4 {
   color: var(--first-colour);
   font-size: 1.8rem;
   padding: 8px;
-  margin-right: 8px; }
+  margin-right: 8px;
+  border-radius: 50%; }
   .search_noti i {
     font-weight: 500; }
   .search_noti:hover {
-    cursor: pointer; }
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.05); }
 .search_box {
   padding: 0 14px;
   border-radius: var(--border-radius);
@@ -171,8 +178,16 @@ h1, h2, h3, h4 {
   margin-top: 12px;
   margin-left: 12px; }
 .trend_item {
+  --height: 4px;
   display: flex;
-  margin-bottom: 12px; }
+  margin-bottom: var(--height);
+  padding: calc(12px - var(--height)) 12px;
+  border-radius: 8px;
+  transition: ease-in-out 0.05s; }
+  .trend_item:hover {
+    background-color: rgba(38, 32, 97, 0.95); }
+  .trend_item:hover .trend_song-name, .trend_item:hover .artist_name, .trend_item:hover .favourite_name, .trend_item:hover .trend_time-song, .trend_item:hover .trend_option-icon {
+    color: #fff; }
 .trend_link {
   flex: 1;
   align-items: center;
@@ -233,7 +248,12 @@ h1, h2, h3, h4 {
 .artist_link {
   display: flex;
   justify-content: space-between;
-  align-items: center; }
+  align-items: center;
+  border-radius: calc(var(--border-radius) - 10px); }
+  .artist_link:hover {
+    background-color: rgba(38, 32, 97, 0.95); }
+    .artist_link:hover .artist_name, .artist_link:hover .artist_song-option {
+      color: #fff; }
 .artist_song-name {
   display: flex;
   align-items: center; }
@@ -253,7 +273,15 @@ h1, h2, h3, h4 {
 .favourite_item {
   display: flex;
   flex-direction: column;
-  margin-bottom: 12px; }
+  margin-bottom: 12px;
+  position: relative;
+  top: 0;
+  border-radius: calc(var(--border-radius) - 10px); }
+  .favourite_item:hover {
+    top: -1px;
+    cursor: pointer; }
+    .favourite_item:hover .favourite_img {
+      box-shadow: rgba(0, 0, 0, 0.5) 0 0 10px; }
 .favourite_img {
   padding-top: 100%;
   margin-right: 0; }

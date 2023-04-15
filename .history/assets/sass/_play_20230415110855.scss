@@ -284,7 +284,8 @@
     border-radius: calc(var(--border-radius) - 10px);
     &:hover{
       .favourite_img{
-        box-shadow:rgba(0, 0, 0, 0.5) 0 0 10px;
+        // box-shadow:rgba(0, 0, 0, 0.1) 0 0 10px;
+        box-shadow: #000 0 0 5px;
       }
       top: -1px;
       cursor: pointer;

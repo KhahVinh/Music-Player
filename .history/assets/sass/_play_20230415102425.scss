@@ -133,17 +133,10 @@
     margin-left: 12px;
 }
   &_item{
-    --height: 4px;
     display: flex;
-    margin-bottom: var(--height);
-    padding: calc(12px - var(--height)) 12px;
-    border-radius: 8px;
-    transition: ease-in-out 0.05s;
+    margin-bottom: 12px;
     &:hover{
-      background-color: rgba(38, 32, 97,0.95);
-    }
-    &:hover .trend_song-name, &:hover .trend_time-song, &:hover .trend_option-icon{
-      color: #fff;
+      background-color: rgba($color: #3c3abe, $alpha: 0.4);
     }
 }
   &_link{
@@ -233,13 +226,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-radius: calc(var(--border-radius) - 10px);
-    &:hover{
-      background-color: rgba(38, 32, 97, 0.95);
-      .artist_name, .artist_song-option{
-        color: #fff;
-      }
-    }
 }
   &_song-name{
     display: flex;
@@ -279,16 +265,6 @@
     display: flex;
     flex-direction: column;
     margin-bottom: 12px;
-    position: relative;
-    top: 0;
-    border-radius: calc(var(--border-radius) - 10px);
-    &:hover{
-      .favourite_img{
-        box-shadow:rgba(0, 0, 0, 0.5) 0 0 10px;
-      }
-      top: -1px;
-      cursor: pointer;
-    }
   }
   &_img{
     @extend .trend_song-img;
