@@ -35,6 +35,9 @@
     padding: 8px; }
     .nav_list-link i {
       font-weight: normal; }
+    .nav_list-link:hover {
+      color: #fff;
+      text-shadow: #fff 0 0 10px; }
 
 :root {
   --first-colour: #2d2e37;
@@ -73,7 +76,8 @@ span {
   display: inline block; }
 
 h1, h2, h3, h4 {
-  color: var(--fifth-colour); }
+  color: var(--fifth-colour);
+  cursor: default; }
 
 .app {
   background-color: rgba(60, 58, 190, 0.4);
