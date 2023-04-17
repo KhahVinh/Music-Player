@@ -1,0 +1,99 @@
+.play_song{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 100%;
+  background-color: rgba($color: #290c59, $alpha: 1);
+  border-radius: var(--border-radius);
+  padding: 24px;
+  // box-shadow: rgba($color: #3c3abe, $alpha: 0.6) 0 0 24px;
+}
+
+.song {
+  &_intro{
+    margin-bottom: 40px;
+}
+  &_img{
+    display: block;
+    padding-top: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: var(--border-radius);
+    position: relative;
+    margin-bottom: 32px;
+}
+  &_img-avatar{
+    display: block;
+    padding-top: 90%;
+    padding-left: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+}
+  &_name{
+    font-size: 3.4rem;
+    line-height: 3.6rem;
+    color: var(--second-colour);
+    text-align: center;
+}
+  &_artist{
+    display: block;
+    font-size: 2.4rem;
+    line-height: 2.6rem;
+    color: var(--second-colour);
+    text-align: center;
+}
+  &_control{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+}
+  &_control-replay{
+    font-size: 2rem;
+    font-weight: 600;
+    color: #fff;
+    padding: 8px;
+    filter: brightness(0.4);
+    cursor: pointer;
+    &:hover{
+      filter: brightness(1);
+    }
+}
+  &_control-main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  &_control-back{
+    @extend .song_control-replay;
+}
+  &_control-play{
+    font-size: 3rem;
+    font-weight: 600;
+    color: var(--fifth-colour);
+    background-color: #fff;
+    box-shadow: #fff 0 0 5px;
+    cursor: pointer;
+    padding: 12px;
+    border-radius: 50%;
+    margin: 0 8px;
+    i{
+      position: relative;
+      left: 2px;
+    }
+}
+  &_control-next{
+    @extend .song_control-replay;
+}
+  &_control-random{
+    @extend .song_control-replay;
+}
+}

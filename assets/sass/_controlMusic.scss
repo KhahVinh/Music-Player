@@ -1,6 +1,7 @@
 .nav{
-  min-width: 80px;
+  min-width: 94px;
   padding: 60px 0;
+  background-color: rgba($color: #170f23, $alpha: 0.4);
   &_container{
     display: flex;
     flex-direction: column;

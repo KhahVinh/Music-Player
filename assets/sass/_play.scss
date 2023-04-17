@@ -1,14 +1,24 @@
 .play{
   flex: 1;
   display: flex;
-  margin-left: -12px;
+  // margin-left: -12px;
+  background-color: rgba($color: #000000, $alpha: 0.1);
+  border-radius: var(--border-radius);
   &_song{
     display: none;
+    &-container{
+      display: block;
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+    &-block{
+    }
   }
   &_list{
     &-container{
       flex: 1;
-      margin: 12px;
+      margin: 12px 12px 12px 0;
       background-color: var(--fourth-colour);
       border-radius: var(--border-radius);
       padding: 24px 12px 24px 24px;
@@ -19,6 +29,17 @@
     will-change: --webkit-scrollbar;
     &::-webkit-scrollbar{
       width: 12px;
+    }
+  }
+  &_back-icon{
+    display: none;
+    font-size: 1.8rem;
+    padding: 8px;
+    margin-right: 2px;
+    border-radius: 50%;
+    &:hover{
+      background-color: rgba(0, 0, 0, 0.05);
+      cursor: pointer;
     }
   }
 }
@@ -32,6 +53,11 @@
   &_nav{
     display: flex;
     justify-content: space-between;
+    align-items: center;
+  }
+  &_heading-control{
+    display: flex;
+    justify-content: center;
     align-items: center;
   }
   &_heading{
@@ -71,7 +97,7 @@
     display: flex;
     align-items: center;
     flex: 1;
-    box-shadow: rgba($color: #000000, $alpha: 0.1) 0 0 10px ;
+    box-shadow: rgba($color: #000000, $alpha: 0.4) 0 0 10px ;
   }
   &_icon{
     color: var(--first-colour);
