@@ -1,7 +1,9 @@
 .nav{
   min-width: 94px;
   padding: 60px 0;
-  background-color: rgba($color: #170f23, $alpha: 0.4);
+  border-top-left-radius: var(--border-radius);
+  border-bottom-left-radius: var(--border-radius);
+  background-color: rgba($color: #170f23, $alpha: 0.8);
   &_container{
     display: flex;
     flex-direction: column;

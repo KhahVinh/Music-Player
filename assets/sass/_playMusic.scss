@@ -4,10 +4,11 @@
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
   width: 100%;
-  background-color: rgba($color: #290c59, $alpha: 1);
+  background-color: rgba($color: #3c3abe, $alpha: .3);
   border-radius: var(--border-radius);
   padding: 24px;
-  // box-shadow: rgba($color: #3c3abe, $alpha: 0.6) 0 0 24px;
+  min-height: 648px;
+  margin-left: 12px;
 }
 
 .song {
@@ -28,20 +29,32 @@
     display: block;
     padding-top: 90%;
     padding-left: 90%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 50%;
+    &-container{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+    }
 }
   &_name{
     font-size: 3.4rem;
     line-height: 3.6rem;
     color: var(--second-colour);
     text-align: center;
+    margin-bottom: 12px;
+    width: 100%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
   &_artist{
     display: block;
@@ -65,6 +78,7 @@
     cursor: pointer;
     &:hover{
       filter: brightness(1);
+      text-shadow: #fff 0 0 5px;
     }
 }
   &_control-main{
@@ -88,6 +102,22 @@
     i{
       position: relative;
       left: 2px;
+      transition: transform linear 0.2s;
+      will-change: transform;
+    }
+    .btn-pause{
+      display: none;
+    }
+    &.playing{
+      .btn-play{
+        display: none;
+        transform: rotate(90deg);
+      }
+      .btn-pause{
+        transform: rotate(0);
+        display: block;
+        left: 0;
+      }
     }
 }
   &_control-next{
@@ -96,4 +126,31 @@
   &_control-random{
     @extend .song_control-replay;
 }
+}
+
+.progress {
+  width: 100%;
+  -webkit-appearance: none;
+  height: 6px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+  margin-bottom: 24px;
+}
+
+.progress::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 12px;
+  height: 6px;
+  background-color: var(--sixth-colour);
+  cursor: pointer;
+}
+
+.song_control-random.active, .song_control-replay.active,
+.song_control-random.active, .song_control-replay.active {
+  filter: brightness(1);
+  text-shadow: #fff 0 0 5px;
 }
