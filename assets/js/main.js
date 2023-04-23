@@ -24,6 +24,8 @@ const backBtn = $('.song_control-back');
 const randomBtn = $('.song_control-random');
 const replayBtn = $('.song_control-replay');
 
+const controlBtn = $$('.nav_list-link');
+
 const progress = $('#progress');
 let btnBack = $('.play_back-icon');
 
@@ -151,7 +153,12 @@ const app = {
         listSong.classList.add('c-12');
         playSongBlock.classList.add('c-4');
         playListBlock.classList.add('c-8');
+        controlBtn[0].classList.remove('active');
+        controlBtn[1].classList.add('active');
+
       } else {
+        controlBtn[0].classList.add('active');
+        controlBtn[1].classList.remove('active');
         btnBack.style.display = 'none';
         playSong.style.display = 'none';
         listTop.style.display = 'block';
@@ -289,6 +296,9 @@ const app = {
         }
       })
     }
+    // Hoạt ảnh banner home
+    const banner = $$('.banner_img');
+
   },
   scrollToActiveSong: function () {
     setTimeout(() => {

@@ -41,6 +41,9 @@
     .nav_list-link:hover {
       color: #fff;
       text-shadow: #fff 0 0 10px; }
+    .nav_list-link.active {
+      color: #fff;
+      text-shadow: #fff 0 0 10px; }
 
 :root {
   --first-colour: #2d2e37;
@@ -181,13 +184,20 @@ h1, h2, h3, h4 {
     font-size: 1.4rem;
     color: var(--second-colour); }
 
-.banner_img {
-  display: block;
-  padding-top: 252px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  border-radius: var(--border-radius); }
+.banner {
+  display: flex;
+  overflow: hidden; }
+  .banner_img {
+    order: 1;
+    min-width: 100%;
+    display: block;
+    padding-top: 252px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: var(--border-radius); }
+    .banner_img.view {
+      order: 0; }
 
 .trend_container {
   margin-top: 12px; }
