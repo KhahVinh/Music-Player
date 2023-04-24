@@ -12,6 +12,8 @@
   <!-- Link CSS -->
   <link rel="stylesheet" href="./assets/css/grid.css">
   <link rel="stylesheet" href="./assets/css/style.css">
+  <!-- Link CSS thư viện -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
 </head>
 <body>
   <video class="video_background" autoplay loop muted>
@@ -78,7 +80,7 @@
           <div class="play_song-container">
             <div class="play_song ">
               <div class="song_intro">
-                <span class="song_img" style="background-image: url();">
+                <span class="song_img" style="background-image: url(./assets/img/backgrounds/5.jpg);">
                   <span class="song_img-avatar-container">
                     <span class="song_img-avatar"></span>
                   </span>
@@ -145,17 +147,19 @@
                 <div class="list_trend-container col c-8">
                   <div class="list_trend">
                     <div class="banner">
-                      <span class="banner_img" style="background-image: url(./assets/img/song/gio.jpg);"></span>
-                      <span class="banner_img" style="background-image: url(./assets/img/song/hen_em_o_lan_yeu_thu_hai.jpg);"></span>
-                      <span class="banner_img" style="background-image: url(./assets/img/song/that_ra_em_chang_thuong_anh_vay_dau.jpg);"></span>
-                      <span class="banner_img" style="background-image: url(./assets/img/song/neu_luc_do.jpg);"></span>
-                      <!-- <div class="banner_intro">
-                        <span class="intro_author">Taylor Switch</span>
-                        <h3 class="intro_heading">Listen to trending songs all the time</h3>
-                        <a href="#" class="intro_play">Explore now</a>
-                      </div> -->
+                      <span id="banner-1" class="banner_img" style="background-image: url(./assets/img/song/gio.jpg);"></span>
+                      <span id="banner-2" class="banner_img" style="background-image: url(./assets/img/song/hen_em_o_lan_yeu_thu_hai.jpg);"></span>
+                      <span id="banner-3" class="banner_img" style="background-image: url(./assets/img/song/that_ra_em_chang_thuong_anh_vay_dau.jpg);"></span>
+                      <span id="banner-4" class="banner_img" style="background-image: url(./assets/img/song/neu_luc_do.jpg);"></span>
+                    </div>
+                    <div class="banner_control">
+                      <a href="" class="banner_control-item"></a>
+                      <a href="" class="banner_control-item"></a>
+                      <a href="" class="banner_control-item"></a>
+                      <a href="" class="banner_control-item"></a>
                     </div>
                   </div>
+                  
                 </div>
                 <!-- Phần bài hát đề xuất, ưu tiên -->
                 <div class="col c-4">
@@ -327,5 +331,7 @@
     </div>
   </div>
   <script src="./assets/js/main.js"></script>
+  <!-- link JS animation -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 </body>
 </html>

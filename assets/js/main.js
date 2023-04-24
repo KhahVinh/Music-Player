@@ -122,7 +122,8 @@ const app = {
                 </span>
               </span>
               <span class="trend_time">
-                <span class="trend_time-song">03:24</span>
+                <span class="trend_time-song"></span>  
+                <audio scr="${song.path}"></audio>
                 <span class="trend_option">
                   <span class="trend_option-icon">
                     <i class="ti-heart"></i>
@@ -137,6 +138,13 @@ const app = {
       `
     });
     $('.trend_list').innerHTML = htmls.join('');
+    let audioElenment = $$('.trend_time > audio');
+    audioElenment.forEach(audio => {
+      return audio.addEventListener('loadedmetadata', function(){
+        return audio.duration;
+      })
+    })
+    console.log(audioElenment)
   },
   handleEvent: function() {
     const _this = this;
@@ -172,6 +180,9 @@ const app = {
         _this.clickBack = !_this.clickBack;
       };
     };
+    // Xử lí click vào icon backHome và chơi nhạc
+    controlBtn[0].addEventListener('click', backHome);
+    controlBtn[1].addEventListener('click', clickSong);
     // Xử lí sự kiện khi bấm trở về trang chủ tìm kiếm
     function backHome() {
      _this.clickBack = !_this.clickBack;
